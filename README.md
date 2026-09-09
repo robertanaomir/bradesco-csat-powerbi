@@ -45,11 +45,24 @@ Entre os principais indicadores estão:
 ### Exemplo de medida
 
 ```DAX
-CSAT % =
-DIVIDE(
-    [Clientes Satisfeitos],
-    [Total de Avaliações]
-)
+Melhor Gerente = 
+VAR TabelaGerentes =
+    ADDCOLUMNS(
+        ALLSELECTED(Fato_CSAT[Manager]),
+        "@Performance", [CSAT]
+    )
+VAR Melhor =
+    TOPN(
+        1,
+        TabelaGerentes,
+        [@Performance], DESC
+    )
+RETURN
+    CONCATENATEX(
+        Melhor,
+        Fato_CSAT[Manager],
+        ", "
+    )
 ```
 
 ---
