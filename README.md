@@ -58,6 +58,8 @@ DIVIDE(
 
 O painel foi desenvolvido com foco em **objetividade, acompanhamento da meta e identificação dos principais pontos de atenção**.
 
+![Dashboard](dashboard/dashboard-executivo.png)
+
 ### Principais resultados
 
 | Indicador                   |      Resultado |
@@ -81,6 +83,8 @@ A tendência recente também é favorável, com **CSAT de 84,8% nos últimos 7 d
 Foi implementado **Row-Level Security (RLS)** para atender ao requisito de controle de acesso do case.
 
 O painel deve ser disponibilizado exclusivamente para **gerentes**, enquanto **John Smith** possui acesso diferenciado aos dados analíticos para visualização e extração em Excel.
+
+![Dashboard](dashboard/acesso-gerencial-rls.png)
 
 ---
 
